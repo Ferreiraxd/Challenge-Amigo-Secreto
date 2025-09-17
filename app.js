@@ -127,3 +127,10 @@ function agregarAmigo() {
 
     renderizarLista();
 }
+
+amigoInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        agregarAmigo();
+    }
+});
