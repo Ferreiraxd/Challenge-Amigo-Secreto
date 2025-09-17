@@ -20,7 +20,7 @@ class Amigos {
         return this.#amigos.has(amigo);
     }
 
-    getLargo(){
+    getCantidad(){
         return this.#amigos.size;
     }
 
@@ -61,15 +61,15 @@ function limpiarLista(){
 }
 
 function sortearAmigo() {
-    const getlargoListaNombres = amigos.getLargo();
-    if(getlargoListaNombres <= 1) {
+    const getCantidadListaNombres = amigos.getCantidad();
+    if(getCantidadListaNombres <= 1) {
         alert("Por favor, ingresa al menos dos amigos para iniciar el sorteo");
         return;
     }
 
     ulListReference.replaceChildren();
 
-    const numeroRandom = generarRandom(getlargoListaNombres);
+    const numeroRandom = generarRandom(getCantidadListaNombres);
     const alAzar = amigos.getNombres()[numeroRandom];
     
     const sorteado = document.createElement('li');
@@ -115,7 +115,7 @@ function agregarAmigo() {
 
     amigos.setNombre(nombreAmigo);
 
-    if(amigos.getLargo() >= 1 && refLimpiarLista.style.display === "none" ) {
+    if(amigos.getCantidad() >= 1 && refLimpiarLista.style.display === "none" ) {
         refLimpiarLista.style.display = 'flex';
     }
 
