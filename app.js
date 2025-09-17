@@ -73,7 +73,7 @@ function sortearAmigo() {
     const alAzar = amigos.getNombres()[numeroRandom];
     
     const sorteado = document.createElement('li');
-    sorteado.innerHTML = `el amigo secreto sorteado es: ${alAzar}`
+    sorteado.innerHTML = `El amigo secreto sorteado es: ${alAzar}`
     refResultado.replaceChildren(sorteado);
     refResultado.style.display = 'list-item';
     //se puede cambiar tanto el ícono como el texto del botón
